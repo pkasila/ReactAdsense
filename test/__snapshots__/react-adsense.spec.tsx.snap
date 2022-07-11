@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReactAdsense Children 1`] = `
+<ins
+  className="adsbygoogle display-flex"
+  data-ad-client="sf"
+  data-ad-format="auto"
+  data-ad-layout=""
+  data-ad-layout-key=""
+  data-ad-slot="1"
+  data-full-width-responsive="false"
+  style={
+    Object {
+      "display": "block",
+    }
+  }
+>
+  <p>
+    Loading...
+  </p>
+</ins>
+`;
+
+exports[`ReactAdsense Create instance 1`] = `
+<ins
+  className="adsbygoogle display-flex"
+  data-ad-client="sf"
+  data-ad-format="auto"
+  data-ad-layout=""
+  data-ad-layout-key=""
+  data-ad-slot="1"
+  data-full-width-responsive="false"
+  style={
+    Object {
+      "display": "block",
+    }
+  }
+/>
+`;
+
+exports[`ReactAdsense Page level ads 1`] = `
+<ins
+  className="adsbygoogle display-flex"
+  data-ad-client="sf"
+  data-ad-format="auto"
+  data-ad-layout=""
+  data-ad-layout-key=""
+  data-ad-slot="1"
+  data-full-width-responsive="false"
+  style={
+    Object {
+      "display": "block",
+    }
+  }
+/>
+`;
+
+exports[`ReactAdsense Push to window.adsbygoogle 1`] = `
+<ins
+  className="adsbygoogle "
+  data-ad-client="sf"
+  data-ad-format="auto"
+  data-ad-layout=""
+  data-ad-layout-key=""
+  data-ad-slot="1"
+  data-full-width-responsive="false"
+  style={
+    Object {
+      "display": "block",
+    }
+  }
+/>
+`;
