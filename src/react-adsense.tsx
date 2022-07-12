@@ -47,7 +47,11 @@ export default class ReactAdsense extends React.Component<Props> {
 
     if (typeof window !== 'undefined') {
       // not SSR
-      (window.adsbygoogle || []).push(p);
+      try {
+        (window.adsbygoogle || []).push(p);
+      } catch {
+        // Just ignore the error
+      }
     }
 
     return (
