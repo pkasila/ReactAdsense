@@ -60,12 +60,12 @@ export default class ReactAdsense extends React.Component<Props> {
       layoutKey,
       format,
       responsive,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      pageLevelAds,
       adTest,
       children,
       ...rest
     } = this.props;
-
-    this.handleUpdate();
 
     return (
       <ins
