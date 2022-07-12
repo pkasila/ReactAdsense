@@ -4,6 +4,8 @@ import { Props } from './props';
 export default class ReactAdsense extends React.Component<Props> {
   constructor(props: Props) {
     super(props);
+
+    this.handleUpdate = this.handleUpdate.bind(this);
   }
 
   static defaultProps = {
@@ -20,28 +22,21 @@ export default class ReactAdsense extends React.Component<Props> {
     children: undefined,
   };
 
-  render(): ReactNode {
-    const {
-      className,
-      style,
-      client,
-      slot,
-      layout,
-      layoutKey,
-      format,
-      responsive,
-      pageLevelAds,
-      adTest,
-      children,
-      ...rest
-    } = this.props;
+  componentDidMount(): void {
+    this.handleUpdate();
+  }
 
+  componentDidUpdate(): void {
+    this.handleUpdate();
+  }
+
+  handleUpdate(): void {
     const p: {
       google_ad_client?: any;
       enable_page_level_ads?: any;
     } = {};
-    if (pageLevelAds) {
-      p.google_ad_client = client;
+    if (this.props.pageLevelAds) {
+      p.google_ad_client = this.props.client;
       p.enable_page_level_ads = true;
     }
 
@@ -53,6 +48,24 @@ export default class ReactAdsense extends React.Component<Props> {
         // Just ignore the error
       }
     }
+  }
+
+  render(): ReactNode {
+    const {
+      className,
+      style,
+      client,
+      slot,
+      layout,
+      layoutKey,
+      format,
+      responsive,
+      adTest,
+      children,
+      ...rest
+    } = this.props;
+
+    this.handleUpdate();
 
     return (
       <ins
